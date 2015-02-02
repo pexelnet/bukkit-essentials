@@ -1,7 +1,11 @@
 package eu.matejkormuth.bukkit.inventory;
 
+import org.bukkit.Color;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.LeatherArmorMeta;
 
 public class Armor {
     protected final ItemStack[] armor;
@@ -60,5 +64,21 @@ public class Armor {
         player.getInventory().setChestplate(this.armor[1]);
         player.getInventory().setLeggings(this.armor[2]);
         player.getInventory().setBoots(this.armor[3]);
+    }
+
+    public static Armor createLether(Color color) {
+        ItemStack helmet = new ItemStack(Material.LEATHER_HELMET);
+        ItemMeta im = helmet.getItemMeta();
+        ((LeatherArmorMeta) im).setColor(color);
+        helmet.setItemMeta(im);
+
+        ItemStack chestplate = new ItemStack(Material.LEATHER_CHESTPLATE);
+        chestplate.setItemMeta(im);
+        ItemStack leggings = new ItemStack(Material.LEATHER_LEGGINGS);
+        leggings.setItemMeta(im);
+        ItemStack boots = new ItemStack(Material.LEATHER_BOOTS);
+        boots.setItemMeta(im);
+
+        return new Armor(helmet, chestplate, leggings, boots);
     }
 }
