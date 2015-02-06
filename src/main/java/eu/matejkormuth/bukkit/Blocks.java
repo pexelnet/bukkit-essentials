@@ -10,7 +10,8 @@ public class Blocks {
         }
 
         return block.getType().equals(Material.SIGN)
-                || block.getType().equals(Material.SIGN_POST);
+                || block.getType().equals(Material.SIGN_POST)
+                || block.getType().equals(Material.WALL_SIGN);
     }
 
     public static final boolean isWater(final Block block) {
