@@ -1,5 +1,6 @@
 package eu.matejkormuth.bukkit;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -39,5 +40,9 @@ public final class Worlds {
     public static final String nameOf(final Location location) {
         Objects.requireNonNull(location);
         return location.getWorld().getName();
+    }
+
+    public static List<World> all() {
+        return Bukkit.getWorlds();
     }
 }
