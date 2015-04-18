@@ -3,16 +3,18 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>eu.matejkormuth</groupId>
   <artifactId>bukkit-essentials</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>${version}</version>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <version>1.8.3</version>
   </properties>
 
   <dependencies>
+    <!-- From matejkormuth-repo -->
     <dependency>
-      <groupId>org.bukkit</groupId>
-      <artifactId>bukkit</artifactId>
-      <version>1.7.9-R0.2</version>
+      <groupId>spigot</groupId>
+      <artifactId>spigot</artifactId>
+      <version>${version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -32,6 +34,14 @@
     <repository>
       <id>bukkit-repo</id>
       <url>http://repo.bukkit.org/content/groups/public/</url>
+    </repository>
+    <repository>
+      <id>spigot-repo</id>
+      <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+    </repository>
+    <repository>
+      <id>matejkormuth-repo</id>
+      <url>http://repo.matejkormuth.eu/</url>
     </repository>
   </repositories>
   <name>Essentials utils and tools for Bukkit plugin development.</name>
